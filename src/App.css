@@ -1,0 +1,50 @@
+.page-spanish {
+  padding-top: 140px; 
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.panel-heading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: white;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 0;
+  padding: 20px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.panel-search{
+  position: fixed;
+  top: 180px; 
+  left: 25%;
+  width: 100vw;
+  background: white;
+  z-index: 9;
+
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap:16px;
+  justify-content: center;
+	text-align: center;
+  margin: 20px auto 0 auto; 
+  width: 50%;
+}
+
+.panel-sayings-list {
+  width: 60%;
+  align-items: center;
+  margin: 140px 25% 0 25%; 
+  max-height: calc(100vh - 300px);
+  overflow-y: auto;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  border-radius: 8px;
+  padding-bottom: 24px;
+}
