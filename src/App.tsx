@@ -12,8 +12,6 @@ import "./App.css";
 
 export default function App() {
   const [searchText, setSearchText] = useState("");
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [levels, setLevels] = useState(initialLevels);
   const [selectedLevel, setSelectedLevel] = useState(initialSelectedLevel);
   const [sayings, setSayings] = useState(
     rawSayings
@@ -30,7 +28,8 @@ export default function App() {
   );
   const handleLevelChange = (value: string) => {
     const newSelectedLevel: Level =
-      levels.find((le) => le.id === Number(value)) ?? initialSelectedLevel;
+      initialLevels.find((le) => le.id === Number(value)) ??
+      initialSelectedLevel;
     setSelectedLevel(newSelectedLevel);
   };
 
@@ -61,7 +60,7 @@ export default function App() {
         <div className="panel-search">
           <Search setSearchText={setSearchText} />
           <LevelSelect
-            levels={levels}
+            levels={initialLevels}
             selectedLevel={selectedLevel}
             handleLevelChange={handleLevelChange}
           />
